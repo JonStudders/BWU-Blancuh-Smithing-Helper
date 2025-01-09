@@ -35,6 +35,9 @@ public class BlancuhSmithingHelper extends LoopingScript {
             } else if (chatMessageEvent.getMessage().contains("Your unfinished item is at full heat:")) {
                 println("Need to smith!");
                 setBotState(BotState.SMITHING);
+            } else if (chatMessageEvent.getMessage().contains("You finished smithing:")) {
+                println("Item completed.");
+                setBotState(BotState.HEATING);
             }
         });
     }
