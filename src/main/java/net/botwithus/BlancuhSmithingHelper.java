@@ -38,6 +38,9 @@ public class BlancuhSmithingHelper extends LoopingScript {
             } else if (chatMessageEvent.getMessage().contains("You finished smithing:")) {
                 println("Item completed.");
                 setBotState(BotState.HEATING);
+            } else if (chatMessageEvent.getMessage().contains("You finish smithing:")) {
+                println("Item completed.");
+                setBotState(BotState.HEATING);
             }
         });
     }
